@@ -22,7 +22,7 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                loader: 'html'
+                loader: 'raw!html-minify'
             },
             {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
@@ -41,7 +41,13 @@ module.exports = {
             {
                 test: /\.less$/,
                 include: helpers.root('src', 'main'),
-                loader: 'raw!css!less'
+                exclude: helpers.root('src', 'main', 'style'),
+                loader: 'raw!less'
+            },
+            {
+                test: /\.less$/,
+                include: helpers.root('src', 'main', 'style'),
+                loader: 'style!css!less'
             }
         ]
     },
@@ -54,5 +60,21 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/main/index.html'
         })
-    ]
+    ],
+
+    htmlLoader: {
+        minimize: {
+            collapseWhitespace: true,
+            conservativeCollapse: true
+        }
+    },
+
+    'html-minify-loader': {
+        empty: true,
+        cdata: true,
+        comments: false,
+        dom: {
+            lowerCaseAttributeNames: false
+        }
+    }
 };

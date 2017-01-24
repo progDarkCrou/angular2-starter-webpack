@@ -1,6 +1,6 @@
 {
   "name": "angular2-webpack-starter",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Angular2 webpack starter",
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js --port 8080",
@@ -31,6 +31,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "html-loader": "^0.4.3",
+    "html-minify-loader": "^1.1.0",
     "html-webpack-plugin": "^2.15.0",
     "jasmine-core": "^2.4.1",
     "karma": "^1.2.0",
