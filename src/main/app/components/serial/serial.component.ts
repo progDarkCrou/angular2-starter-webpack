@@ -3,7 +3,7 @@ import { BehaviorSubject } from "rxjs";
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
-  templateUrl: './serial.component.html'
+  templateUrl: 'serial.component.html'
 })
 export class SerialComponent {
 

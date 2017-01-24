@@ -8,6 +8,6 @@ export const routes = RouterModule.forRoot([
   },
   {
     path: 'admin',
-    loadChildren: () => require('es6-promise!./modules/admin/admin.module')('AdminModule')
+    loadChildren: () => require('es6-promise!./modules/admin/admin.module.ts')('AdminModule')
   }
 ]);
