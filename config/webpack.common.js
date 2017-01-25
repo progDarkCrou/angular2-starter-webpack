@@ -73,6 +73,7 @@ module.exports = {
         empty: true,
         cdata: true,
         comments: false,
+        quotes: true,
         dom: {
             lowerCaseAttributeNames: false
         }
