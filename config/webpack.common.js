@@ -25,7 +25,7 @@ module.exports = {
                 loader: 'raw!html-minify'
             },
             {
-                test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+                test: /\.(png|jpeg|gif|svg|woff|woff2|ttf|eot|ico)$/,
                 loader: 'file?name=assets/[name].[hash].[ext]'
             },
             {
@@ -61,13 +61,6 @@ module.exports = {
             template: 'src/main/index.html'
         })
     ],
-
-    htmlLoader: {
-        minimize: {
-            collapseWhitespace: true,
-            conservativeCollapse: true
-        }
-    },
 
     'html-minify-loader': {
         empty: true,
